@@ -1,0 +1,12 @@
+schema_version: 1
+module_path: packages
+title: DeepSeek Harness 多包工作区（npm 能力插件集合）
+scope:
+    - packages/
+source_files: []
+depends_on: []
+related_to:
+    - path: native
+    - path: python_sdk
+    - path: scripts
+    - path: snapshots

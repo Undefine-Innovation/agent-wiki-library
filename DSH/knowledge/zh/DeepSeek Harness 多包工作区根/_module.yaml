@@ -1,0 +1,54 @@
+schema_version: 1
+module_path: ""
+title: DeepSeek Harness 多包工作区根
+scope:
+    - README.md
+    - CONTRIBUTING.md
+    - AGENTS.md
+    - package.json
+    - pnpm-workspace.yaml
+    - .github/
+    - .agents/
+    - .editorconfig
+    - .gitattributes
+    - .gitignore
+    - .gitlab-ci.yml
+    - .jscpd.json
+    - .oxlintrc.json
+    - .oxlintrc.staged.json
+    - .rgignore
+    - BENCHMARK.md
+    - BRAND_GUIDELINES.i18n.yaml
+    - BRAND_GUIDELINES.md
+    - BRAND_GUIDELINES.zh.md
+    - CLAUDE.md
+    - CONTRIBUTING.i18n.yaml
+    - CONTRIBUTING.zh.md
+    - LICENSE
+    - README.i18n.yaml
+    - README.zh.md
+    - SAFETY.i18n.yaml
+    - SAFETY.md
+    - SAFETY.zh.md
+    - THIRD_PARTY_NOTICES.md
+    - knip.json
+    - lefthook.yml
+    - pnpm-lock.yaml
+    - pytest.ini
+    - tsconfig.base.client.json
+    - tsconfig.base.json
+    - tsconfig.client.json
+    - tsconfig.host.json
+    - tsconfig.json
+    - tsdown.config.ts
+    - vitest.config.ts
+    - vitest.e2e.config.ts
+    - vitest.expected.config.ts
+    - vitest.shared.ts
+    - vitest.snapshot.config.ts
+    - vitest.web-stress.config.ts
+    - vitest.web.config.ts
+    - vitest.web.perf.config.ts
+source_files: []
+depends_on: []
+related_to: []

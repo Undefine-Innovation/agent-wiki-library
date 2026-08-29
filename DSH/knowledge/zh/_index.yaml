@@ -1,0 +1,144 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: master
+nodes_managed: true
+exported_at: "2026-08-28T19:49:34Z"
+modules:
+    "":
+        dir_name: DeepSeek Harness 多包工作区根
+        title: DeepSeek Harness 多包工作区根
+        scope:
+            - README.md
+            - CONTRIBUTING.md
+            - AGENTS.md
+            - package.json
+            - pnpm-workspace.yaml
+            - .github/
+            - .agents/
+            - .editorconfig
+            - .gitattributes
+            - .gitignore
+            - .gitlab-ci.yml
+            - .jscpd.json
+            - .oxlintrc.json
+            - .oxlintrc.staged.json
+            - .rgignore
+            - BENCHMARK.md
+            - BRAND_GUIDELINES.i18n.yaml
+            - BRAND_GUIDELINES.md
+            - BRAND_GUIDELINES.zh.md
+            - CLAUDE.md
+            - CONTRIBUTING.i18n.yaml
+            - CONTRIBUTING.zh.md
+            - LICENSE
+            - README.i18n.yaml
+            - README.zh.md
+            - SAFETY.i18n.yaml
+            - SAFETY.md
+            - SAFETY.zh.md
+            - THIRD_PARTY_NOTICES.md
+            - knip.json
+            - lefthook.yml
+            - pnpm-lock.yaml
+            - pytest.ini
+            - tsconfig.base.client.json
+            - tsconfig.base.json
+            - tsconfig.client.json
+            - tsconfig.host.json
+            - tsconfig.json
+            - tsdown.config.ts
+            - vitest.config.ts
+            - vitest.e2e.config.ts
+            - vitest.expected.config.ts
+            - vitest.shared.ts
+            - vitest.snapshot.config.ts
+            - vitest.web-stress.config.ts
+            - vitest.web.config.ts
+            - vitest.web.perf.config.ts
+        source_files: []
+        children:
+            - docs
+            - native
+            - packages
+            - python_sdk
+            - scripts
+            - snapshots
+            - website
+        depends_on: []
+        related_to: []
+    docs:
+        dir_name: 项目文档与多语言规范（docs）
+        title: 项目文档与多语言规范（docs）
+        scope:
+            - docs/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    native:
+        dir_name: Landlock 子进程沙箱启动器 (landlock-run)
+        title: Landlock 子进程沙箱启动器 (landlock-run)
+        scope:
+            - native/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: packages
+    packages:
+        dir_name: DeepSeek Harness 多包工作区（npm 能力插件集合）
+        title: DeepSeek Harness 多包工作区（npm 能力插件集合）
+        scope:
+            - packages/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: native
+            - path: python_sdk
+            - path: scripts
+            - path: snapshots
+    python_sdk:
+        dir_name: DeepSeek Harness Python SDK
+        title: DeepSeek Harness Python SDK
+        scope:
+            - python/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: packages
+            - path: snapshots
+    scripts:
+        dir_name: 仓库构建、质量门禁与文档_翻译生成脚本集
+        title: 仓库构建、质量门禁与文档/翻译生成脚本集
+        scope:
+            - scripts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: packages
+            - path: website
+    snapshots:
+        dir_name: 会话录制快照测试套件（ACP _ SDK _ Headless）
+        title: 会话录制快照测试套件（ACP / SDK / Headless）
+        scope:
+            - snapshots/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: packages
+            - path: python_sdk
+    website:
+        dir_name: DeepSeek Harness 文档站点（VitePress）
+        title: DeepSeek Harness 文档站点（VitePress）
+        scope:
+            - website/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: scripts

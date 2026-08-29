@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: snapshots
+title: 会话录制快照测试套件（ACP / SDK / Headless）
+scope:
+    - snapshots/
+source_files: []
+depends_on: []
+related_to:
+    - path: packages
+    - path: python_sdk
