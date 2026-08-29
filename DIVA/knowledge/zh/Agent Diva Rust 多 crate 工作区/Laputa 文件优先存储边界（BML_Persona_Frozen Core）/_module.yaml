@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: laputa
+title: Laputa 文件优先存储边界（BML/Persona/Frozen Core）
+scope:
+    - agent-diva-laputa/
+source_files: []
+depends_on: []
+related_to:
+    - path: files
+    - path: manager/service_wiring
+    - path: migration

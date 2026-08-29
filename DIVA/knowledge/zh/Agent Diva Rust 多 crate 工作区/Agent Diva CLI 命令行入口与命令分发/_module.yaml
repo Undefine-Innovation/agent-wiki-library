@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: cli
+title: Agent Diva CLI 命令行入口与命令分发
+scope:
+    - agent-diva-cli/
+source_files: []
+depends_on: []
+related_to:
+    - path: manager/service_wiring

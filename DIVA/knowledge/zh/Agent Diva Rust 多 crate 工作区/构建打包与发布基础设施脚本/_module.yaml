@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: scripts_and_infra
+title: 构建打包与发布基础设施脚本
+scope:
+    - scripts/
+    - contrib/
+source_files: []
+depends_on: []
+related_to: []

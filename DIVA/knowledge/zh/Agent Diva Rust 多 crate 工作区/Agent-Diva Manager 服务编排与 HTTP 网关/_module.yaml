@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: manager
+title: Agent-Diva Manager 服务编排与 HTTP 网关
+scope:
+    - agent-diva-manager/
+source_files: []
+depends_on: []
+related_to: []

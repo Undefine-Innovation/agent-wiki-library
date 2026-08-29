@@ -1,0 +1,20 @@
+schema_version: 1
+module_path: agent_loop/runtime_infrastructure
+title: Agent 运行时基础设施：工具装配、子代理与记忆整合
+scope:
+    - agent-diva-agent/src/skills.rs
+    - agent-diva-agent/src/subagent.rs
+    - agent-diva-agent/src/subagent_run_handler.rs
+    - agent-diva-agent/src/tool_assembly.rs
+    - agent-diva-agent/src/tool_results.rs
+    - agent-diva-agent/src/memory_boundary.rs
+    - agent-diva-agent/src/runtime_control.rs
+    - agent-diva-agent/src/token_estimate.rs
+    - agent-diva-agent/src/workspace_instructions.rs
+    - agent-diva-agent/src/consolidation.rs
+    - agent-diva-agent/src/lib.rs
+source_files: []
+depends_on: []
+related_to:
+    - path: core
+    - path: sandbox

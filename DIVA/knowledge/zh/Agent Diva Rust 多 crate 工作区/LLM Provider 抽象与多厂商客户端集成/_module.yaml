@@ -1,0 +1,10 @@
+schema_version: 1
+module_path: providers
+title: LLM Provider 抽象与多厂商客户端集成
+scope:
+    - agent-diva-providers/
+source_files: []
+depends_on: []
+related_to:
+    - path: manager/service_wiring
+    - path: neuron

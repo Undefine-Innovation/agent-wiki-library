@@ -1,0 +1,302 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: dev
+nodes_managed: true
+exported_at: "2026-08-28T21:47:20Z"
+modules:
+    "":
+        dir_name: Agent Diva Rust 多 crate 工作区
+        title: Agent Diva Rust 多 crate 工作区
+        scope:
+            - README.md
+            - AGENTS.md
+            - AGENTS-ARCH.MD
+            - LOCK.md
+            - TODOLIST.md
+            - Cargo.toml
+            - Cargo.lock
+            - clippy.toml
+            - deny.toml
+            - rustfmt.toml
+            - justfile
+            - .gitignore
+            - .github/
+            - CLAUDE.md
+            - LAPUTA.md
+            - LICENSE
+            - README.zh-CN.md
+        source_files: []
+        children:
+            - agent_loop
+            - autodream
+            - channels
+            - cli
+            - core
+            - docs
+            - e2e
+            - files
+            - gui
+            - laputa
+            - manager
+            - migration
+            - neuron
+            - providers
+            - sandbox
+            - scripts_and_infra
+            - service
+            - tooling
+            - tools
+        depends_on: []
+        related_to: []
+    agent_loop:
+        dir_name: Agent Diva Agent Loop 核心编排层
+        title: Agent Diva Agent Loop 核心编排层
+        scope:
+            - agent-diva-agent/
+        source_files: []
+        children:
+            - agent_loop/runtime_infrastructure
+        depends_on: []
+        related_to:
+            - path: channels
+    agent_loop/runtime_infrastructure:
+        dir_name: Agent 运行时基础设施：工具装配、子代理与记忆整合
+        title: Agent 运行时基础设施：工具装配、子代理与记忆整合
+        scope:
+            - agent-diva-agent/src/skills.rs
+            - agent-diva-agent/src/subagent.rs
+            - agent-diva-agent/src/subagent_run_handler.rs
+            - agent-diva-agent/src/tool_assembly.rs
+            - agent-diva-agent/src/tool_results.rs
+            - agent-diva-agent/src/memory_boundary.rs
+            - agent-diva-agent/src/runtime_control.rs
+            - agent-diva-agent/src/token_estimate.rs
+            - agent-diva-agent/src/workspace_instructions.rs
+            - agent-diva-agent/src/consolidation.rs
+            - agent-diva-agent/src/lib.rs
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: core
+            - path: sandbox
+    autodream:
+        dir_name: AutoDream 手动运行编排与文件持久化
+        title: AutoDream 手动运行编排与文件持久化
+        scope:
+            - agent-diva-autodream/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: manager/service_wiring
+    channels:
+        dir_name: 多渠道消息通道集成层
+        title: 多渠道消息通道集成层
+        scope:
+            - agent-diva-channels/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: agent_loop
+    cli:
+        dir_name: Agent Diva CLI 命令行入口与命令分发
+        title: Agent Diva CLI 命令行入口与命令分发
+        scope:
+            - agent-diva-cli/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: manager/service_wiring
+    core:
+        dir_name: Agent-Diva 核心领域库
+        title: Agent-Diva 核心领域库
+        scope:
+            - agent-diva-core/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: agent_loop/runtime_infrastructure
+    docs:
+        dir_name: agent-diva 项目文档与架构决策仓库
+        title: agent-diva 项目文档与架构决策仓库
+        scope:
+            - docs/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    e2e:
+        dir_name: agent-diva E2E 测试框架
+        title: agent-diva E2E 测试框架
+        scope:
+            - agent-diva-e2e/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: manager/service_wiring
+    files:
+        dir_name: Agent Diva 文件存储与索引子系统
+        title: Agent Diva 文件存储与索引子系统
+        scope:
+            - agent-diva-files/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: laputa
+    gui:
+        dir_name: Agent Diva GUI（桌面端前端 + VRM 虚拟人运行时）
+        title: Agent Diva GUI（桌面端前端 + VRM 虚拟人运行时）
+        scope:
+            - agent-diva-gui/
+        source_files: []
+        children:
+            - gui/approval_center
+        depends_on: []
+        related_to: []
+    gui/approval_center:
+        dir_name: 审批中心与用户问答卡片组件
+        title: 审批中心与用户问答卡片组件
+        scope:
+            - agent-diva-gui/src/components/ApprovalCenterCard.vue
+            - agent-diva-gui/src/components/ApprovalCenterDrawer.vue
+            - agent-diva-gui/src/components/AskUserQuestionCard.vue
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: manager/service_wiring
+    laputa:
+        dir_name: Laputa 文件优先存储边界（BML_Persona_Frozen Core）
+        title: Laputa 文件优先存储边界（BML/Persona/Frozen Core）
+        scope:
+            - agent-diva-laputa/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: files
+            - path: manager/service_wiring
+            - path: migration
+    manager:
+        dir_name: Agent-Diva Manager 服务编排与 HTTP 网关
+        title: Agent-Diva Manager 服务编排与 HTTP 网关
+        scope:
+            - agent-diva-manager/
+        source_files: []
+        children:
+            - manager/service_wiring
+        depends_on: []
+        related_to: []
+    manager/service_wiring:
+        dir_name: Agent-Diva Manager 服务编排与 HTTP 网关
+        title: Agent-Diva Manager 服务编排与 HTTP 网关
+        scope:
+            - agent-diva-manager/src/approval_service.rs
+            - agent-diva-manager/src/file_service.rs
+            - agent-diva-manager/src/mcp_service.rs
+            - agent-diva-manager/src/planning_service.rs
+            - agent-diva-manager/src/skill_service.rs
+            - agent-diva-manager/src/state.rs
+            - agent-diva-manager/src/server.rs
+            - agent-diva-manager/src/lib.rs
+            - agent-diva-manager/src/manager.rs
+            - agent-diva-manager/src/marketplace.rs
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: autodream
+            - path: cli
+            - path: e2e
+            - path: gui/approval_center
+            - path: laputa
+            - path: providers
+            - path: service
+            - path: tools
+    migration:
+        dir_name: Agent Diva 离线迁移工具 (agent-diva-migrate)
+        title: Agent Diva 离线迁移工具 (agent-diva-migrate)
+        scope:
+            - agent-diva-migration/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: laputa
+    neuron:
+        dir_name: Neuron 单轮 LLM 执行节点
+        title: Neuron 单轮 LLM 执行节点
+        scope:
+            - agent-diva-neuron/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: providers
+    providers:
+        dir_name: LLM Provider 抽象与多厂商客户端集成
+        title: LLM Provider 抽象与多厂商客户端集成
+        scope:
+            - agent-diva-providers/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: manager/service_wiring
+            - path: neuron
+    sandbox:
+        dir_name: Agent Diva 沙箱隔离与命令执行编排
+        title: Agent Diva 沙箱隔离与命令执行编排
+        scope:
+            - agent-diva-sandbox/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: agent_loop/runtime_infrastructure
+    scripts_and_infra:
+        dir_name: 构建打包与发布基础设施脚本
+        title: 构建打包与发布基础设施脚本
+        scope:
+            - scripts/
+            - contrib/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    service:
+        dir_name: Agent Diva Windows 服务守护进程
+        title: Agent Diva Windows 服务守护进程
+        scope:
+            - agent-diva-service/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: manager/service_wiring
+    tooling:
+        dir_name: 工具抽象与模块引导框架
+        title: 工具抽象与模块引导框架
+        scope:
+            - agent-diva-tooling/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    tools:
+        dir_name: Agent Diva 内置工具集（agent-diva-tools）
+        title: Agent Diva 内置工具集（agent-diva-tools）
+        scope:
+            - agent-diva-tools/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to:
+            - path: manager/service_wiring

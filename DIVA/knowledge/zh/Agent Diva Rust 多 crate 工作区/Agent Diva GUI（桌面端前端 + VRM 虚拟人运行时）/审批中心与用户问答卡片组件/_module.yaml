@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: gui/approval_center
+title: 审批中心与用户问答卡片组件
+scope:
+    - agent-diva-gui/src/components/ApprovalCenterCard.vue
+    - agent-diva-gui/src/components/ApprovalCenterDrawer.vue
+    - agent-diva-gui/src/components/AskUserQuestionCard.vue
+source_files: []
+depends_on: []
+related_to:
+    - path: manager/service_wiring

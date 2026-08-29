@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: tooling
+title: 工具抽象与模块引导框架
+scope:
+    - agent-diva-tooling/
+source_files: []
+depends_on: []
+related_to: []

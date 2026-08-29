@@ -1,0 +1,24 @@
+schema_version: 1
+module_path: ""
+title: Agent Diva Rust 多 crate 工作区
+scope:
+    - README.md
+    - AGENTS.md
+    - AGENTS-ARCH.MD
+    - LOCK.md
+    - TODOLIST.md
+    - Cargo.toml
+    - Cargo.lock
+    - clippy.toml
+    - deny.toml
+    - rustfmt.toml
+    - justfile
+    - .gitignore
+    - .github/
+    - CLAUDE.md
+    - LAPUTA.md
+    - LICENSE
+    - README.zh-CN.md
+source_files: []
+depends_on: []
+related_to: []

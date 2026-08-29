@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: e2e
+title: agent-diva E2E 测试框架
+scope:
+    - agent-diva-e2e/
+source_files: []
+depends_on: []
+related_to:
+    - path: manager/service_wiring

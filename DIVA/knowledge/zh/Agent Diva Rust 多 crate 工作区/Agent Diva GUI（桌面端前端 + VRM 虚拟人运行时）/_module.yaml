@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: gui
+title: Agent Diva GUI（桌面端前端 + VRM 虚拟人运行时）
+scope:
+    - agent-diva-gui/
+source_files: []
+depends_on: []
+related_to: []

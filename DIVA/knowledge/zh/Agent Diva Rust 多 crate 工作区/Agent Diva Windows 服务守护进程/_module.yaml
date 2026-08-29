@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: service
+title: Agent Diva Windows 服务守护进程
+scope:
+    - agent-diva-service/
+source_files: []
+depends_on: []
+related_to:
+    - path: manager/service_wiring

@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: tools
+title: Agent Diva 内置工具集（agent-diva-tools）
+scope:
+    - agent-diva-tools/
+source_files: []
+depends_on: []
+related_to:
+    - path: manager/service_wiring

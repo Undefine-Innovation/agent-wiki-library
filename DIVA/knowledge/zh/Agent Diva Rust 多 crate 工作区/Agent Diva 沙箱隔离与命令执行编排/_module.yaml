@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: sandbox
+title: Agent Diva 沙箱隔离与命令执行编排
+scope:
+    - agent-diva-sandbox/
+source_files: []
+depends_on: []
+related_to:
+    - path: agent_loop/runtime_infrastructure
