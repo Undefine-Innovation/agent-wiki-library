@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: sdk
+title: vivy-sdk 插件打包与校验 CLI
+scope:
+    - sdk/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,42 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: zh-CN
+branch: feat/agent-harness
+nodes_managed: true
+exported_at: "2026-08-24T23:17:58Z"
+modules:
+    "":
+        dir_name: AGENT-VIVY V0 运行时单体仓库
+        title: AGENT-VIVY V0 运行时单体仓库
+        scope:
+            - README.md
+            - AGENTS.md
+            - go.mod
+            - go.sum
+            - Dockerfile
+            - docker-compose.yml
+            - docker-compose.postgres.yml
+            - config.dev.yaml
+            - config.example.yaml
+            - justfile
+            - dev.cmd
+            - dev.ps1
+            - launch-vivy-studio.ps1
+            - .gitignore
+            - .dockerignore
+            - .gitattributes
+            - .gitmodules
+        source_files: []
+        children:
+            - sdk
+        depends_on: []
+        related_to: []
+    sdk:
+        dir_name: vivy-sdk 插件打包与校验 CLI
+        title: vivy-sdk 插件打包与校验 CLI
+        scope:
+            - sdk/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

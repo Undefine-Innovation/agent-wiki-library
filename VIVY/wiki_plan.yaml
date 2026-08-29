@@ -1,0 +1,40 @@
+version: 1
+
+# 扫描范围：排除运行时数据、参考源码、构建产物与生成文件
+scope:
+  include: []
+  exclude:
+    - ".workspace/**"          # 只读参考源码（eino / deepseek-harness / crush）
+    - "data/**"                # 运行时 Journal / demo / workspaces（租户数据）
+    - "archive/**"             # 归档的二进制
+    - "dist/**"
+    - ".pnpm-store/**"
+    - "ui/node_modules/**"
+    - "ui/dist/**"
+    - "ui/test-results/**"
+    - "ui/.dev-workdir/**"
+    - "ui/.e2e-workdir/**"
+    - "ui/.tanstack/**"
+    - "ui/src/routeTree.gen.ts"  # TanStack Router 生成文件
+    - "ui/agent-diva-source/**"  # 移植来源参考，非本仓库实现
+    - "internal/generated/**"
+    - "docs/logs/**"           # 逐次迭代日志，体量大且时效性强
+    - "*.exe"
+
+repowiki:
+  template: architecture       # 全局采用「代码架构分析」预设模板
+  notes:
+    - text: "本仓库是 Vivy 物种运行时（vivy.exe）的实现之家：单 Go 模块（D-006），基于 cloudwego/eino 框架装配个人网关 Agent，前端为内嵌的 React + Vite UI。"
+    - text: "架构红线：Eino 及参考项目类型绝不允许泄漏到 internal/runtime 与 internal/provider 之外的 UI 契约中（PRD D-007）；这两个包是唯一允许依赖 eino 的包。"
+    - text: "密钥（secrets）绝不持久化（D-010）：配置文件只保存 env_key 名称，日志、快照、事件负载与测试 fixture 中必须脱敏。"
+    - text: "每次 Run 恰好一个终态事件（D-008）；事件经 internal/events 总线按 after_seq 游标重放。"
+    - text: "Vivy（内核/物种，默认范围）与 Vivy Studio（第一方 IDE 外壳，仅显式提及时涉及）严格分离；docs/architecture/ 下的文档是产品契约，其中 VIVY-STUDIO.md 为 Studio 规范。"
+    - text: "插件不通过修改 internal/runtime/engine.go 安装，必须走 vivy-sdk verify / pack 流程；plugins/hello-fs 是示例用户插件，sdk/ 是插件作者导入窗。"
+    - text: "验证门禁是仓库根目录的 just ci；开发内环为 just dev（后端 :8787 + Vite :3015 分离对），内嵌 UI 是发布/CI 路径。存储默认 SQLite，可选 Postgres 只是第二个 Journal 引擎而非副本集。"
+  documents: []                # 留空 = 由 wiki 构建器自动规划页面
+
+knowledgecard:
+  notes:
+    - text: "按以下模块边界拆分知识卡：internal/runtime（Run 服务 + Eino 适配、工具后端、审批/预算/沙箱）、internal/provider（openai-compatible / anthropic / mock 适配与 YAML bundle）、internal/domain（Session/Message/Run/RunEvent 等契约类型）、internal/storage（Journal/SnapshotStore/BlobStore/LeaseStore + SQLite 后端）、internal/rpc（面向 UI 的 JSON-RPC 控制面）、internal/events（事件 fan-out）、internal/app（装配与生命周期 + worker）、internal/tools（ToolSpec 注册与审批策略）、internal/pluginhost（插件宿主）、internal/studio 与 internal/studiocore（Studio 外壳）、sdk（vivy-sdk verify/pack）、ui/src（React UI）、docs/architecture（产品契约文档）。"
+    - text: "描述模块依赖时必须强调：仅 internal/runtime 与 internal/provider 可依赖 github.com/cloudwego/eino*，domain 类型不得反向依赖 eino。"
+    - text: "ui/agent-diva-source、.workspace/ 是只读参考源码，不属于本仓库实现，不要为其生成知识卡；ui/src/components/ui/ 是 shadcn 风格基础组件库，合并为一张卡即可，不必逐个展开。"

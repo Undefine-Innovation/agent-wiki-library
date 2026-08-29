@@ -1,0 +1,24 @@
+schema_version: 1
+module_path: ""
+title: AGENT-VIVY V0 运行时单体仓库
+scope:
+    - README.md
+    - AGENTS.md
+    - go.mod
+    - go.sum
+    - Dockerfile
+    - docker-compose.yml
+    - docker-compose.postgres.yml
+    - config.dev.yaml
+    - config.example.yaml
+    - justfile
+    - dev.cmd
+    - dev.ps1
+    - launch-vivy-studio.ps1
+    - .gitignore
+    - .dockerignore
+    - .gitattributes
+    - .gitmodules
+source_files: []
+depends_on: []
+related_to: []
